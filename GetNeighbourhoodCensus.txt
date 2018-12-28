@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Configuration;
 
 /// <summary>
 /// Get census of neighbourhood.
@@ -24,10 +25,11 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
    neighbourhoodID = req.GetQueryNameValuePairs()
         .FirstOrDefault(q => string.Compare(q.Key, "neighbourhoodID", true) == 0)
         .Value;
-
-
+        
+        string appConfiguration = ConfigurationManager.AppSettings["CENSUS_NEIGHBORHOOD"];
+       
         CloudStorageAccount storageAccount =
-         CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=inspectioncompub022;AccountKey=ommia/JaURQPrmwORF6ZlNrHS+cfj/qN3jtLAQE8Ut/uCAt30Gl4rx1QK3E/afcgWGbS7UZiTJPYLqPBYWbNRQ==;EndpointSuffix=core.windows.net");
+         CloudStorageAccount.Parse(appConfiguration);
 
         CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
         CloudTable table = tableClient.GetTableReference("Demographic2010");
