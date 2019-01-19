@@ -1,0 +1,67 @@
+swagger: '2.0'
+info:
+  title: smartcitydenver.azurewebsites.net
+  version: 1.0.0
+host: smartcitydenver.azurewebsites.net
+basePath: /
+schemes:
+  - https
+  - http
+paths:
+  /api/censusdata:
+    get:
+      operationId: /api/censusdata/get
+      produces:
+       - application/json
+      consumes: []
+      parameters:
+        - name: neighbourhoodID
+          in: query
+          description: id of the neighbourhood
+          required: true
+          type: string
+          format: string
+      description: This API returns the Census information for the neighbourhoodId.
+      responses:
+        '200':
+          description: Success operation
+      security:
+        - apikeyQuery: []
+
+  /api/crimedata:
+    get:
+      operationId: /api/crimedata/get
+      produces:
+        - application/json
+      consumes: []
+      parameters:
+        - name: startDate
+          in: query
+          description: Starting date in YYYY-MM-DD format
+          required: true
+          type: string
+          format: string
+        - name: endDate
+          in: query
+          description: End date in YYYY-MM-DD format
+          required: true
+          type: string
+          format: string
+        - name: neighbourhoodID
+          in: query
+          description: id of the neighbourhood
+          required: false
+          type: string
+          format: string
+      description: This API returns the reported crimes between the provided start and end date, user can optionally provide the neighbourhoodId. The API will return maximum of seven days of data irrespective of the end date in case the duration is more than seven days.
+      responses:
+        '200':
+          description: Success operation
+      security:
+        - apikeyQuery: []
+definitions: {}
+securityDefinitions:
+  apikeyQuery:
+    type: apiKey
+    name: code
+    in: query
