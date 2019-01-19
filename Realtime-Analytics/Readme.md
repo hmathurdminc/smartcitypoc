@@ -237,8 +237,6 @@ FROM
     [DMIInputAlias]
 GROUP BY TumblingWindow (second,60), OutputTime  
 HAVING MIN(temperature)<40 
-GROUP BY TumblingWindow (second,60), OutputTime  
-HAVING MAX(temperature)<85 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ```
 
