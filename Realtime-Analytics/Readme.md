@@ -4,7 +4,7 @@
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Proposed_Azure_Technical_Design_StreamAnalytics.png)
 
-**In order to develop real-time visualizations and dashboards based on stream of data produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.**
+**In order to develop real-time visualizations and dashboards based on stream of data produced by City's IoT devices we leveraged Azure Stream Analytic queries to monitor & analyze to improve security, safety and well-being of Denver citizens.**
 
 To build stream analytics models, DMI used a custom simulator to simulate the data that is required for the real-time analytics. Leveraging this sample datasets, we built Azure Stream Analytics queries to analyze weather patterns and traffic congestion in a specific neighborhood within a particular timeframe. In order to build the Stream Analytics components, we leveraged Azure IoT hub, Azure Stream Analytics, and Power BI.
 
