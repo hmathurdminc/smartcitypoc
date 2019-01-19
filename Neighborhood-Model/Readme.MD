@@ -10,11 +10,11 @@
 
  - ****Census Neighborhood Demographics Dataset:**** City of Denver Census Neighborhood Demographics (2010) Dataset2 includes the housing and population data of the 2010 Denver census.
 
-***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (`YEAR, DAY OF THE WEEK, HOUR`) from `REPORTED_DATE` in the dataset. Field `TIME` is assigned with label `Morning (6 AM to 12 PM)`, `Afternoon (12 PM to 5 PM)`, `Evening (5 PM to 8 PM)`, and `Night (8 PM to 6 AM)` based on hour.
+ - ***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (`YEAR, DAY OF THE WEEK, HOUR`) from `REPORTED_DATE` in the dataset. Field `TIME` is assigned with label `Morning (6 AM to 12 PM)`, `Afternoon (12 PM to 5 PM)`, `Evening (5 PM to 8 PM)`, and `Night (8 PM to 6 AM)` based on hour.
 
 Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` and further joined with Census dataset by the field `NEIGHBORHOOD_ID`. Census dataset was additionally added with field `NEIGHBORHOOD_ID` to match with the Crime dataset for merging.
 
-***Data preprocessing workflow developed leveraging Azure Machine Learning***
+ - ***Data preprocessing workflow developed leveraging Azure Machine Learning***
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Azure_Machine_Learning_Data_Preprocessing_Workflow.png) 
 
@@ -31,30 +31,30 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 
 ***Documented Algorithms*** 
 
-****Boosted Decision Tree Regression:**** Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
-- Maximum number of leaves per tree : 20.
+ - ****Boosted Decision Tree Regression:**** Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
+ - Maximum number of leaves per tree : 20.
 - Minimum number of training instances required to form a leaf : 10.
 - Learning rate : 0.2.
 - Total number of trees constructed : 100.
 
-***Crime Prediction Model Development Workflow using Azure Machine Learning***
+ - ***Crime Prediction Model Development Workflow using Azure Machine Learning***
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Azure_Workflow_Model_Development.png) 
 
 ***Algorithm Output:*** The algorithm outputs the number of crimes predicted for a particular Neighborhood at a particular time for the year 2018.
 
-***Performance Estimates:***
+ - ***Performance Estimates:***
 
-****Test Data Description:**** Crime data of year 2018 of 78 Neighborhoods was selected as test dataset to evaluate the model prediction performance. 
+ - ****Test Data Description:**** Crime data of year 2018 of 78 Neighborhoods was selected as test dataset to evaluate the model prediction performance. 
 
-****Validation:**** Model showed prediction accuracy of `MAE`: 1.8, `RMSE`: 2.5, and `Coefficient of Determination`: 0.51 on test set evaluation.
+  - ****Validation:**** Model showed prediction accuracy of `MAE`: 1.8, `RMSE`: 2.5, and `Coefficient of Determination`: 0.51 on test set evaluation.
 
-***Model Output***
+   - ***Model Output***
 
-****Sample Crime Prediction Model Data Output****
+   - ****Example Crime Prediction Model Data Output****
 
-- The Inputs to the crime prediction model are `NEIGHBORHOOD_ID`, `Demographic features of the neighborhood`, `Month`, `Day`, and `Time`. 
+     - The Inputs to the crime prediction model are `NEIGHBORHOOD_ID`, `Demographic features of the neighborhood`, `Month`, `Day`, and `Time`. 
 
-- The Outputs from the model are the predicted number of crimes for the specific neighborhood.
+  - The Outputs from the model are the predicted number of crimes for the specific neighborhood.
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Neighborhood_Model_Input_Output.png)
