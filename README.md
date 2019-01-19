@@ -1,10 +1,10 @@
-#  *** APPENDIX B - PROJECT SCENARIOS***
+#  ***APPENDIX B - PROJECT SCENARIOS***
 
-Produce a reusable neighborhood model including data input, documented algorithms and dataoutputs utilizing Microsoft Azure. The model should include a visual dashboard that provides ananalysis of the data.
+**Produce a reusable neighborhood model including data input, documented algorithms and dataoutputs utilizing Microsoft Azure. The model should include a visual dashboard that provides ananalysis of the data.**
 
 We decomposed the scenario provided into two hypothetical use cases as described below.
-1. Develop a [Neighborhood Model](https://github.com/smartcitypoc/smartcitypoc/tree/master/Neighborhood-Model) based on available datasets from the City of Denver demographic data to predict crime.
-2. Develop real-time analytics leveraging Azure Stream Analytics based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.
+- Develop a [Neighborhood Model](https://github.com/smartcitypoc/smartcitypoc/tree/master/Neighborhood-Model) based on available datasets from the City of Denver demographic data to predict crime.
+- Develop real-time analytics leveraging Azure Stream Analytics based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.
 
 
 --We decomposed the scenarios .....
