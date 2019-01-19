@@ -1,6 +1,6 @@
 # City and County of Denver Smart City Proof of Concept(PoC) - Reusable Model Development
 
-                          Proposed Azure Techincal Architecture for Crime Preditcion model
+                          Proposed Azure Techincal Design for Crime Preditcion model
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Proposed_Azure_Reference_Architecture_Neighborhood.png) 
 
