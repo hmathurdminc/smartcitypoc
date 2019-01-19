@@ -1,6 +1,6 @@
 # City and County of Denver Smart City Proof of Concept(PoC) - Stream Analytics Model
 
-**Proposed Azure Techincal Design for Stream Analytics model**
+				Proposed Azure Techincal Design for Stream Analytics model
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Proposed_Azure_Technical_Design_StreamAnalytics.png)
 
