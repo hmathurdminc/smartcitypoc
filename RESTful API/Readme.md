@@ -6,39 +6,53 @@
 
 **Data Inputs:** 
 
-***Crime API Spec***
+***Crime API Specification***
+
 This API returns the reported crimes between the provided start and end date, user can optionally provide the neighbourhoodID. The API will return maximum of seven days of data irrespective of the end date in case the duration is more than seven days.
 
 ****Request****
+
 ```GET	/api/crimedata```
 
 - Parameters Name
   - startDate
   - endDate
   - neighbourhoodID
-- Type	
+- Type
+  - String
 - Description
-	String	Starting date in YYYY-MM-DD format (required parameter)
-	String	End date in YYYY-MM-DD format (required parameter)
-	String	id of the neighbourhood (optional parameter)
+  - Starting date in YYYY-MM-DD format (required parameter)
+  - End date in YYYY-MM-DD format (required parameter)
+  - id of the neighbourhood (optional parameter)
  
-Response
-application/json
- 
-Sample Request – https://smartcitydenver.azurewebsites.net/api/crimedata?startDate=2016-12-22&endDate=2016-12-23&neighbourhoodID=five-points
- 
- 
-Census API Spec
-This API returns the Census information for the neighbourhoodId.
-Request
-GET	/api/censusdata
+****Response****
 
-Parameters Name	Type	Description
-neighbourhoodID	String	id of the neighbourhood (required parameter)
- 
- 
-Response
 application/json
  
-Sample Request – https://smartcitydenver.azurewebsites.net/api/censusdata?neighbourhoodID=five-points
+***Sample Request***
+
+(https://smartcitydenver.azurewebsites.net/api/crimedata?startDate=2016-12-22&endDate=2016-12-23&neighbourhoodID=five-points)
+ 
+***Census API Specification***
+
+This API returns the Census information for the ```neighbourhoodId```.
+
+****Request****
+
+`GET /api/censusdata`
+
+- Parameters Name		
+  - neighbourhoodID	
+- Type
+  - String
+- Description
+  - id of the neighbourhood (required parameter)
+  
+****Response****
+
+`application/json`
+ 
+***Sample Request***
+
+(https://smartcitydenver.azurewebsites.net/api/censusdata?neighbourhoodID=five-points)
  
