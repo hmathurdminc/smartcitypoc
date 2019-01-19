@@ -30,6 +30,7 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 - ****Training Dataset:**** Crime data from 2013 to 2017 across 78 Neighborhoods was selected for training the predictive model.
 
 ***Documented Algorithms*** 
+
 ****Boosted Decision Tree Regression:**** Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
 - Maximum number of leaves per tree : 20.
 - Minimum number of training instances required to form a leaf : 10.
