@@ -1,6 +1,6 @@
 # City and County of Denver Smart City Proof of Concept(PoC) - Reusable Model Development
 
-     ***Proposed Azure Techincal Architecture for Crime Preditcion model***
+                Proposed Azure Techincal Architecture for Crime Preditcion model
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Proposed_Azure_Reference_Architecture_Neighborhood.png) 
 
@@ -14,7 +14,7 @@
 
 Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` and further joined with Census dataset by the field `NEIGHBORHOOD_ID`. Census dataset was additionally added with field `NEIGHBORHOOD_ID` to match with the Crime dataset for merging.
 
- - ***Data preprocessing workflow developed leveraging Azure Machine Learning***
+                ***Data preprocessing workflow developed leveraging Azure Machine Learning***
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Azure_Machine_Learning_Data_Preprocessing_Workflow.png) 
 
@@ -37,7 +37,7 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
    - Learning rate : 0.2.
    - Total number of trees constructed : 100.
 
- - ***Crime Prediction Model Development Workflow using Azure Machine Learning***
+                ***Crime Prediction Model Development Workflow using Azure Machine Learning***
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Azure_Workflow_Model_Development.png) 
 
@@ -55,6 +55,6 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 
      - The Inputs to the crime prediction model are `NEIGHBORHOOD_ID`, `Demographic features of the neighborhood`, `Month`, `Day`, and `Time`. 
 
-  - The Outputs from the model are the predicted number of crimes for the specific neighborhood.
+  - The Outputs from the model are the predicted number of crimes for the specific neighborhood as shown below.
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Neighborhood_Model_Input_Output.png)
