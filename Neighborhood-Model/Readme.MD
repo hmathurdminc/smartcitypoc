@@ -1,4 +1,4 @@
-**###Algorithm Details
+**#Algorithm Details**
 
 Dataset: The following two datasets where obtained from the City of Denver Data Repository and utilized to build the Machine Learning model
 •	Crime Dataset: City of Denver Crime dataset1 includes criminal offenses in the City and County of Denver for the previous five calendar years plus the current year to date. The data is based on the National Incident Based Reporting System (NIBRS) which includes all victims of person crimes and all crimes within an incident. 
