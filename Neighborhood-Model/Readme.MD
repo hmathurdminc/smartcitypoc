@@ -1,6 +1,6 @@
 # **City of Denver - Algorithm Details**
 
-1. Data Inputs : The following two datasets where obtained from the City of Denver Data Repository and utilized to build the Machine Learning model.
+***Data Inputs:*** The following two datasets where obtained from the City of Denver Data Repository and utilized to build the Machine Learning model.
 
  - Crime Dataset: City of Denver Crime dataset1 includes criminal offenses in the City and County of Denver for the previous five calendar years plus the current year to date. The data is based on the National Incident Based Reporting System (NIBRS) which includes all victims of person crimes and all crimes within an incident.
 
@@ -20,7 +20,8 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 ***Location of Crime:*** Field `NEIGHBORHOOD_ID` was included in predictor variables to feature the location element to the crime prediction model.
 ***Neighborhood Demographics:*** Pearson Correlation of multiple demographic features from the Census dataset with crime frequency was derived and analyzed. Correlation value of >=0.3 was set as the threshold to filter the demographic features. Fields selected from Census dataset to build the model were, `VACANTUNITS_2010`, `AGE_22_TO_24`, `AGE_25_TO_29`, `AGE_30_TO_34`, `AGE_20_TO_29`, `AGE_30_TO_39`, `HH_W_NONRELATIVES`, `GQ_OTHER_NONINST`, `VACANT_HU`, `VACANT_FOR_SALE`, `VACANT_SOLD_NOT_OCC`, `RENTED_AGE_15_TO_24`.
 ***Training Dataset:*** Crime data from 2013 to 2017 across 78 Neighborhoods was selected for training the predictive model.
-***Algorithm*** – Boosted Decision Tree Regression: Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
+***Algorithm*** 
+****Boosted Decision Tree Regression:**** Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
 - Maximum number of leaves per tree : 20.
 - Minimum number of training instances required to form a leaf : 10.
 - Learning rate : 0.2.
