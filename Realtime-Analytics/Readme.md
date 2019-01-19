@@ -12,6 +12,7 @@ To build stream analytics models, DMI used a custom simulator to simulate the da
 
 - Weather Data Simulator
 DMI developed a light weight weather data simulator that will act as weather sensors, emitting `deviceId`, `location`, `visibility`, `DryBulbFarenheit`, `WetBulbFarenheit`, `DewPointFarenheit`, `RelativeHumidity`, `WindSpeed`, `WindDirection`, `StationPressure`, `Altimeter` as data points. This telemetry data will be ingested into Azure IoT hub service and will made available to Azure Stream Analytics for further processing and transformation to produce real-time alerts, visualizations and dashboards.
+
 Below is the example code for weather data simulator.
 
 ```
@@ -114,7 +115,9 @@ namespace SimulatedDevice
 
 - **Azure environment deployment**
 
-DMI developed a PowerShell script that automated Azure environment deployment along with common framework components  such as Azure resource groups, Power BI consumer groups etc. The Azure environment deployment script (AzureEnv.ps) is as below:
+DMI developed a PowerShell script that automated Azure environment deployment along with common framework components  such as Azure resource groups, Power BI consumer groups etc. 
+
+Below is the example code for the Azure environment deployment.
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------
 $location = "West US"
