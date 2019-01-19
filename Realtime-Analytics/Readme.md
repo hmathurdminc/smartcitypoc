@@ -6,7 +6,7 @@
 
 **Use Case 2: Develop real-time visualizations and dashboards based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.**
 
-To build stream analytics models, DMI used a custom simulator to simulate the data that is required for the real-time analytics. Leveraging this sample datasets, we built Azure Stream Analytics queries  analyze weather patterns and traffic congestion in a specific neighborhood within a particular timeframe. In order to build the Stream Analytics components, we leveraged Azure IoT hub, Azure Stream Analytics, and Power BI.
+To build stream analytics models, DMI used a custom simulator to simulate the data that is required for the real-time analytics. Leveraging this sample datasets, we built Azure Stream Analytics queries to analyze weather patterns and traffic congestion in a specific neighborhood within a particular timeframe. In order to build the Stream Analytics components, we leveraged Azure IoT hub, Azure Stream Analytics, and Power BI.
 
 ***Data Inputs:*** 
 
@@ -187,13 +187,88 @@ New-AzureRmServiceBusQueue -ResourceGroupName $resourceGroup `
 ----------------------------------------------------------------------------------------------------------------------------------------
 ```
 - ***Create a device identity***
+
 1. In the list of resources, click DMITestHub. This was created as a part of PowerShell Script. Select IoT Devices from the Hub pane.
 2. Click + Add. On the Add Device pane, fill in the device ID as DMI-Test-Device. Leave the keys empty, and check Auto Generate Keys. Make sure Connect device to IoT hub is enabled. Click Save.
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Device_Identity.png)
 
 3. Now that it's been created, click on the device to confirm  the creation of keys.
+
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Device_Keys.png)
+
+- ***Setting up and Configuring Azure Stream Analytics & Stream Analytics Job***
+
+1. Logon to the Azure portal, select Stream Analytics job in the results list.
+2. Enter a unique job name for the job. 
+3. Then select an existing DMIResources group. Use West US.
+4. Click CREATE
+5. In order to get back to the created job, click Resource groups. Select DMIResources, then click the Stream Analytics job in the list of resources.
+6. Under Job Topology, click Inputs.
+7. In the Inputs pane, click Add stream input and select IoT Hub. On the screen that comes up, fill in the following fields: Input alias: DMIInputAlias, IoT Hub: Select the IoT Hub – DMITestHub, Endpoint: Select Messaging. 
+8. Shared access policy name: Select iothubowner. The portal fills in the Shared Access Policy Key.
+9. Consumer group: Select the dmiconsumers created earlier. For the rest of the fields, accept the defaults.
+10. Click Save
+11. Under Job Topology, click Outputs.
+12. In the Outputs pane, click Add, and then select Power BI. On the screen that comes up, fill in the following fields:
+13. Output alias: The unique alias for the output such as PowerBIOutputAlias.
+14. Dataset name: Name of the dataset to be used in Power BI such as dmidataset.
+15. Table name: Name of the table to be used in Power BI such as dmitable.
+16. Accept the defaults for the rest of the fields.
+17. Click Authorize, and sign into Power BI account. 
+18. Click Save.
+
+***Documented Algorithms***
+
+- [X] Air Quality Weather Pattern Stream Analytics query
+All the Smart City weather sensor events/data sent to Azure IoT hub will be monitored in real-time for minimum temperature per 60-second window and display results if the minimum temperature is below 40F in real-time. This will be achieved by leveraging Azure Stream Analytic queries. 
+
+Below is an example code to monitor all the events on the IoT hub and display temperatures based on real-time events. 
+
+```
+----------------------------------------------------------------------------------------------------------------------------------------
+SELECT
+    System.timestamp AS OutputTime,
+    MIN(temperature) AS minTemperature
+INTO
+    [PowerBIOutputAlias]
+FROM
+    [DMIInputAlias]
+GROUP BY TumblingWindow (second,60), OutputTime  
+HAVING MIN(temperature)<40 
+GROUP BY TumblingWindow (second,60), OutputTime  
+HAVING MAX(temperature)<85 
+----------------------------------------------------------------------------------------------------------------------------------------
+```
+
+- [X] Avoid Traffic Congestion and identifying faulty traffic sensor Stream Analytics query
+In order to identify a faulty sensor at a busy intersection, we may need to find the last time that a sensor sent data and then did not send events for the next 30 seconds. 
+
+Below is the sample code (query) on an event stream received from the traffic sensors that will help identifying a faulty sensor.
+
+```
+----------------------------------------------------------------------------------------------------------------------------------------
+SELECT
+     t1.time
+     t1.dspl As SensorName
+INTO
+     PowerBIOutputAlias
+FROM
+    DMIInputAlias t1 TIMESTAMP BY time
+LEFT OUTER JOIN  DMIInputAlias t2 TIMESTAMP BY time
+ON
+    t1.dspl=t2.dspl AND
+    DATEDIFF(second,t1,t2) BETWEEN 1 and 30
+WHERE t2.dspl IS NULL
+----------------------------------------------------------------------------------------------------------------------------------------
+```
+
+***Algorithm Output***
+
+As shown in the dashboard the Stream Analytics model provides real-time monitoring and visual alerts for temperature levels below the threshold values.
+
+![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Stream_Analytics_Dashboard.png)
+
 
 
 
