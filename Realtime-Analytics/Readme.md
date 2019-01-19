@@ -8,5 +8,11 @@
 
 To build stream analytics models, DMI used a custom simulator to simulate the data that is required for the real-time analytics. Leveraging this sample datasets, we built Azure Stream Analytics queries  analyze weather patterns and traffic congestion in a specific neighborhood within a particular timeframe. In order to build the Stream Analytics components, we leveraged Azure IoT hub, Azure Stream Analytics, and Power BI.
 
+***Data Inputs:*** 
+
+- Weather Data Simulator
+DMI developed a light weight weather data simulator that will act as weather sensors, emitting `deviceId`, `location`, `visibility`, `DryBulbFarenheit`, `WetBulbFarenheit`, `DewPointFarenheit`, `RelativeHumidity`, `WindSpeed`, `WindDirection`, `StationPressure`, `Altimeter` as data points. This telemetry data will be ingested into Azure IoT hub service and will made available to Azure Stream Analytics for further processing and transformation to produce real-time alerts, visualizations and dashboards.
+
+
 
 
