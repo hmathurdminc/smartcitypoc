@@ -31,7 +31,9 @@ application/json
 
 https://smartcitydenver.azurewebsites.net/api/crimedata?startDate=2016-12-22&endDate=2016-12-23&neighbourhoodID=five-points
 
-4. ****Example code for Azure Function Rest Endpoints for Crime Data***
+4. ****Example code for Azure Function Rest Endpoints for Crime Data****
+
+https://github.com/smartcitypoc/smartcitypoc/blob/master/RESTful%20API/crime.csx
 
 
  
@@ -58,7 +60,8 @@ This API returns the Census information for the ```neighbourhoodId```.
 
 https://smartcitydenver.azurewebsites.net/api/censusdata?neighbourhoodID=five-points
 
-4. ****Example code for Azure Function Rest Endpoints for Census Data***
+4. ****Example code for Azure Function Rest Endpoints for Census Data****
 
+https://github.com/smartcitypoc/smartcitypoc/blob/master/RESTful%20API/census.csx
 
  
