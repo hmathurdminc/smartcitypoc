@@ -6,8 +6,9 @@
 
 ***Census Neighborhood Demographics Dataset:*** City of Denver Census Neighborhood Demographics (2010) Dataset2 includes the housing and population data of the 2010 Denver census.
 
-***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (`YEAR, DAY OF THE WEEK, HOUR`) from “REPORTED_DATE” in the dataset. Field “TIME” is assigned with label “Morning” (6 AM to 12 PM), “Afternoon” (12 PM to 5 PM), “Evening” (5 PM to 8 PM), and “Night” (8 PM to 6 AM) based on hour.
-Crime dataset is aggregated by fields NEIGHBORHOOD_ID, MONTH, DAY, and TIME and further joined with Census dataset by the field “NEIGHBORHOOD_ID”. Census dataset was additionally added with field “NEIGHBORHOOD_ID” to match with the Crime dataset for merging.
+***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (`YEAR, DAY OF THE WEEK, HOUR`) from `REPORTED_DATE` in the dataset. Field `TIME` is assigned with label `Morning (6 AM to 12 PM)`, `Afternoon (12 PM to 5 PM)`, `Evening (5 PM to 8 PM)`, and `Night (8 PM to 6 AM)` based on hour.
+
+Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` and further joined with Census dataset by the field `NEIGHBORHOOD_ID`. Census dataset was additionally added with field `NEIGHBORHOOD_ID` to match with the Crime dataset for merging.
 
 ***Data preprocessing workflow developed leveraging Azure Machine Learning***
 
@@ -15,9 +16,13 @@ Crime dataset is aggregated by fields NEIGHBORHOOD_ID, MONTH, DAY, and TIME and 
 
 
 ***Correlation Analysis and Feature Selection***
-***Time of Crime:*** Fields MONTH, DAY, and TIME were selected as predictor variables for model building which feature the time of crime.
-Location of Crime: Field NEIGHBORHOOD_ID was included in predictor variables to feature the location element to the crime prediction model.
-***Neighborhood Demographics:*** Pearson Correlation of multiple demographic features from the Census dataset with crime frequency was derived and analyzed. Correlation value of >=0.3 was set as the threshold to filter the demographic features. Fields selected from Census dataset to build the model were, VACANTUNITS_2010, AGE_22_TO_24, AGE_25_TO_29, AGE_30_TO_34, AGE_20_TO_29, AGE_30_TO_39, HH_W_NONRELATIVES, GQ_OTHER_NONINST, VACANT_HU, VACANT_FOR_SALE, VACANT_SOLD_NOT_OCC, RENTED_AGE_15_TO_24.
+***Time of Crime:*** Fields `MONTH, DAY, and TIME` were selected as predictor variables for model building which feature the time of crime.
+***Location of Crime:*** Field `NEIGHBORHOOD_ID` was included in predictor variables to feature the location element to the crime prediction model.
+***Neighborhood Demographics:*** Pearson Correlation of multiple demographic features from the Census dataset with crime frequency was derived and analyzed. Correlation value of >=0.3 was set as the threshold to filter the demographic features. Fields selected from Census dataset to build the model were, `VACANTUNITS_2010`, `AGE_22_TO_24`, `AGE_25_TO_29`, `AGE_30_TO_34`, `AGE_20_TO_29`, `AGE_30_TO_39`, `HH_W_NONRELATIVES`, `GQ_OTHER_NONINST`, `VACANT_HU`, `VACANT_FOR_SALE`, `VACANT_SOLD_NOT_OCC`, `RENTED_AGE_15_TO_24`.
 ***Training Dataset:*** Crime data from 2013 to 2017 across 78 Neighborhoods was selected for training the predictive model.
-***Algorithm*** – Boosted Decision Tree Regression: Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set to maximum number of leaves per tree – 20, minimum number of training instances required to form a leaf – 10, learning rate – 0.2, and total number of trees constructed – 100.
+***Algorithm*** – Boosted Decision Tree Regression: Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
+- Maximum number of leaves per tree – 20.
+- Minimum number of training instances required to form a leaf – 10.
+- Learning rate – 0.2.
+- Total number of trees constructed – 100.
 
