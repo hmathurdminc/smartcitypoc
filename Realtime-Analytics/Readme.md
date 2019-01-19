@@ -197,7 +197,7 @@ New-AzureRmServiceBusQueue -ResourceGroupName $resourceGroup `
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Device_Keys.png)
 
-- ***Setting up and Configuring Azure Stream Analytics & Stream Analytics Job***
+- ***Setup, Configure Azure Stream Analytics & Stream Analytics Job***
 
 1. Logon to the Azure portal, select Stream Analytics job in the results list.
 2. Enter a unique job name for the job. 
@@ -220,10 +220,11 @@ New-AzureRmServiceBusQueue -ResourceGroupName $resourceGroup `
 
 ***Documented Algorithms***
 
-- [X] Air Quality Weather Pattern Stream Analytics query
-All the Smart City weather sensor events/data sent to Azure IoT hub will be monitored in real-time for minimum temperature per 60-second window and display results if the minimum temperature is below 40F in real-time. This will be achieved by leveraging Azure Stream Analytic queries. 
+- [X] Air Quality Weather Pattern Stream Analytics query.
 
-Below is an example code to monitor all the events on the IoT hub and display temperatures based on real-time events. 
+All the Smart City's weather sensor data transmitted to Azure IoT hub will be monitored in real-time for minimum temperature of 40F in every 60-second window. Stream Anaytics queries will be leveraged to monitor Data Input and alert if the minimum temperature is below 40F in real-time. 
+
+Below is an example code(query) to monitor all the events on the IoT hub and display temperatures based on real-time events. 
 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -241,7 +242,8 @@ HAVING MAX(temperature)<85
 ----------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-- [X] Avoid Traffic Congestion and identifying faulty traffic sensor Stream Analytics query
+- [X] Avoid Traffic Congestion and identifying faulty traffic sensor Stream Analytics query.
+
 In order to identify a faulty sensor at a busy intersection, we may need to find the last time that a sensor sent data and then did not send events for the next 30 seconds. 
 
 Below is the sample code (query) on an event stream received from the traffic sensors that will help identifying a faulty sensor.
