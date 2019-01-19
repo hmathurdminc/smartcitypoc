@@ -17,7 +17,7 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 
 ***Correlation Analysis and Feature Selection***
 
-***Time of Crime:*** Fields `MONTH, DAY, and TIME` were selected as predictor variables for model building which feature the time of crime.
+- ***Time of Crime:*** Fields `MONTH, DAY, and TIME` were selected as predictor variables for model building which feature the time of crime.
 
 ***Location of Crime:*** Field `NEIGHBORHOOD_ID` was included in predictor variables to feature the location element to the crime prediction model.
 
