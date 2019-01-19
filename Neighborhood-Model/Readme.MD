@@ -42,12 +42,12 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 
 ****Test Data Description:**** Crime data of year 2018 of 78 Neighborhoods was selected as test dataset to evaluate the model prediction performance. 
 
-***Validation:*** Model showed prediction accuracy of `MAE`: 1.8, `RMSE`: 2.5, and `Coefficient of Determination`: 0.51 on test set evaluation.
+****Validation:**** Model showed prediction accuracy of `MAE`: 1.8, `RMSE`: 2.5, and `Coefficient of Determination`: 0.51 on test set evaluation.
 
-***Sample Crime Prediction Model Data Output ***
+***Sample Crime Prediction Model Data Output***
 
-The Inputs to the crime prediction model are `NEIGHBORHOOD_ID`, `Demographic features of the neighborhood`, `Month`, `Day`, and `Time`. 
+- The Inputs to the crime prediction model are `NEIGHBORHOOD_ID`, `Demographic features of the neighborhood`, `Month`, `Day`, and `Time`. 
 
-The Outputs from the model are the predicted number of crimes for the specific neighborhood.
+- The Outputs from the model are the predicted number of crimes for the specific neighborhood.
 
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Neighborhood_Model_Input_Output.png)
