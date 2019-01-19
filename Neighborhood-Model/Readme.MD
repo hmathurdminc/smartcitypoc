@@ -1,4 +1,4 @@
-# **City of Denver - Reusable Model Development **
+**City of Denver - Reusable Model Development **
 
 ***Data Inputs:*** The following two datasets where obtained from the City of Denver Data Repository and utilized to build the Machine Learning model.
 
