@@ -65,7 +65,7 @@
 
     https://github.com/smartcitypoc/smartcitypoc/blob/master/RESTful%20API/census.csx
 
-***API Documentation***
+> ***API Documentation***
 
 For additional information refer the API documentation available at [Swagger Hub](https://app.swaggerhub.com/apis/smartcitypoc/smartcitydenver/1.0.0#/)
  
