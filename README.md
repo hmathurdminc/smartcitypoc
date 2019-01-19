@@ -9,10 +9,7 @@ It is our understanding that The Denver Smart City team would like to design and
 
 
 > **Produce a Restful Public API in JSON format that will provide external entities the ability to receivethe data identified above in an industry standard format including the following parameters:**
- - Starting Date (Month, Day, Year)
- - Ending Date (Month, Day, Year)
- - Data Type (transportation, demographic, air quality, demographic, all)
- - Neighborhood (Denver)
+ `Starting Date (Month, Day, Year)`, `Ending Date (Month, Day, Year)`, 'Data Type (transportation, demographic, air quality, demographic, all)', `Neighborhood (Denver)`
 
 Public [RESTful APIs]() were created using Azure functions that conforms to industry standard formats such as JSON to expose Crime and Census Data for public consumption
 
