@@ -31,11 +31,11 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 
 ***Documented Algorithms*** 
 
- - ****Boosted Decision Tree Regression:**** Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
- - Maximum number of leaves per tree : 20.
-- Minimum number of training instances required to form a leaf : 10.
-- Learning rate : 0.2.
-- Total number of trees constructed : 100.
+ - Boosted Decision Tree Regression: Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
+   - Maximum number of leaves per tree : 20.
+   - Minimum number of training instances required to form a leaf : 10.
+   - Learning rate : 0.2.
+   - Total number of trees constructed : 100.
 
  - ***Crime Prediction Model Development Workflow using Azure Machine Learning***
 
