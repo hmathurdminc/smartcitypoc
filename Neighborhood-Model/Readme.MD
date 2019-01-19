@@ -6,7 +6,7 @@
 
 ***Census Neighborhood Demographics Dataset:*** City of Denver Census Neighborhood Demographics (2010) Dataset2 includes the housing and population data of the 2010 Denver census.
 
-***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (YEAR, DAY OF THE WEEK, HOUR) from “REPORTED_DATE” in the dataset. Field “TIME” is assigned with label “Morning” (6 AM to 12 PM), “Afternoon” (12 PM to 5 PM), “Evening” (5 PM to 8 PM), and “Night” (8 PM to 6 AM) based on hour.
+***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (`YEAR, DAY OF THE WEEK, HOUR`) from “REPORTED_DATE” in the dataset. Field “TIME” is assigned with label “Morning” (6 AM to 12 PM), “Afternoon” (12 PM to 5 PM), “Evening” (5 PM to 8 PM), and “Night” (8 PM to 6 AM) based on hour.
 Crime dataset is aggregated by fields NEIGHBORHOOD_ID, MONTH, DAY, and TIME and further joined with Census dataset by the field “NEIGHBORHOOD_ID”. Census dataset was additionally added with field “NEIGHBORHOOD_ID” to match with the Crime dataset for merging.
 
 ***Data preprocessing workflow developed leveraging Azure Machine Learning***
