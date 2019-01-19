@@ -9,4 +9,4 @@
 ***Data Preprocessing:*** Crime dataset was preprocessed by removing the missing data and duplicate records. Additional data fields were derived (YEAR, DAY OF THE WEEK, HOUR) from “REPORTED_DATE” in the dataset. Field “TIME” is assigned with label “Morning” (6 AM to 12 PM), “Afternoon” (12 PM to 5 PM), “Evening” (5 PM to 8 PM), and “Night” (8 PM to 6 AM) based on hour.
 Crime dataset is aggregated by fields NEIGHBORHOOD_ID, MONTH, DAY, and TIME and further joined with Census dataset by the field “NEIGHBORHOOD_ID”. Census dataset was additionally added with field “NEIGHBORHOOD_ID” to match with the Crime dataset for merging.
 
-![alt text] (/Images/Azure Machine Learning_Data Preprocessing Workflow.png)
+![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Azure_Machine_Learning_Data_Preprocessing_Workflow.png)
