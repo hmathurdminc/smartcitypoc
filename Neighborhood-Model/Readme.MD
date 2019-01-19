@@ -1,4 +1,4 @@
-# **City of Denver - Algorithm Details**
+# **City of Denver - Reusable Model Development **
 
 ***Data Inputs:*** The following two datasets where obtained from the City of Denver Data Repository and utilized to build the Machine Learning model.
 
@@ -16,10 +16,15 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 
 
 ***Correlation Analysis and Feature Selection***
+
 ***Time of Crime:*** Fields `MONTH, DAY, and TIME` were selected as predictor variables for model building which feature the time of crime.
+
 ***Location of Crime:*** Field `NEIGHBORHOOD_ID` was included in predictor variables to feature the location element to the crime prediction model.
+
 ***Neighborhood Demographics:*** Pearson Correlation of multiple demographic features from the Census dataset with crime frequency was derived and analyzed. Correlation value of >=0.3 was set as the threshold to filter the demographic features. Fields selected from Census dataset to build the model were, `VACANTUNITS_2010`, `AGE_22_TO_24`, `AGE_25_TO_29`, `AGE_30_TO_34`, `AGE_20_TO_29`, `AGE_30_TO_39`, `HH_W_NONRELATIVES`, `GQ_OTHER_NONINST`, `VACANT_HU`, `VACANT_FOR_SALE`, `VACANT_SOLD_NOT_OCC`, `RENTED_AGE_15_TO_24`.
+
 ***Training Dataset:*** Crime data from 2013 to 2017 across 78 Neighborhoods was selected for training the predictive model.
+
 ***Algorithm*** 
 ****Boosted Decision Tree Regression:**** Boosted Decision Tree Regression3  Supervised learning method was used to build the model and predict frequency of crimes in a specific location within a particular time. Turning parameters were set as below:
 - Maximum number of leaves per tree : 20.
@@ -32,7 +37,9 @@ Crime dataset is aggregated by fields `NEIGHBORHOOD_ID, MONTH, DAY, and TIME` an
 ![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Neighborhood-Model/Images/Azure_Workflow_Model_Development.png) 
 
 ***Algorithm Output:*** The algorithm outputs the number of crimes predicted for a particular Neighborhood at a particular time for the year 2018.
+
 ***Performance Estimates:***
 
 ***Test Data Description:*** Crime data of year 2018 of 78 Neighborhoods was selected as test dataset to evaluate the model prediction performance. 
-***Validation:*** Model showed prediction accuracy of MAE: 1.8, RMSE: 2.5, and Coefficient of Determination: 0.51 on test set evaluation.
+
+***Validation:*** Model showed prediction accuracy of `MAE`: 1.8, `RMSE`: 2.5, and `Coefficient of Determination`: 0.51 on test set evaluation.
