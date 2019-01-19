@@ -34,6 +34,8 @@
 4. ****Example code for Azure Function Rest Endpoints for Crime Data****
 
     https://github.com/smartcitypoc/smartcitypoc/blob/master/RESTful%20API/crime.csx
+    
+***For Complete API Documentation please refer***
 
 
  > **Census API Specification**
