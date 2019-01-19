@@ -5,7 +5,7 @@
 It is our understanding that The Denver Smart City team would like to design and develop predictive machine learning models to analyze weather, transportation, freight, weather, and neighborhood data models to enable data driven decisions to improve the safety and health of Denver citizens. We decomposed the scenario into two hypothetical use cases as described below.
 
 - Developed a [Neighborhood Model](https://github.com/smartcitypoc/smartcitypoc/tree/master/Neighborhood-Model) based on available datasets from the City of Denver demographic data to predict crime in a neighborhood.
-- Developed real-time dashboards leveraging Azure Stream Analytics, based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.
+- Developed [real-time dashboards](https://github.com/smartcitypoc/smartcitypoc/tree/master/Realtime-Analytics) leveraging Azure Stream Analytics, based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.
 
 
 --We decomposed the scenarios .....
