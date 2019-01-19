@@ -67,7 +67,7 @@
 
 ***API Documentation***
 
-For additional information refer the API documentation available on [Swagger Hub (https://app.swaggerhub.com/apis/smartcitypoc/smartcitydenver/1.0.0#/)
+For additional information refer the API documentation available on [Swagger Hub] (https://app.swaggerhub.com/apis/smartcitypoc/smartcitydenver/1.0.0#/)
  
  https://app.swaggerhub.com/apis/smartcitypoc/smartcitydenver/1.0.0#/
  
