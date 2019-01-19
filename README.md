@@ -2,9 +2,10 @@
 
 **Produce a reusable neighborhood model including data input, documented algorithms and dataoutputs utilizing Microsoft Azure. The model should include a visual dashboard that provides ananalysis of the data.**
 
-We decomposed the scenario provided into two hypothetical use cases as described below.
-- Develop a [Neighborhood Model](https://github.com/smartcitypoc/smartcitypoc/tree/master/Neighborhood-Model) based on available datasets from the City of Denver demographic data to predict crime.
-- Develop real-time analytics leveraging Azure Stream Analytics based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.
+It is our understanding that The Denver Smart City team would like to design and develop predictive machine learning models to analyze weather, transportation, freight, weather, and neighborhood data models to enable data driven decisions to improve the safety and health of Denver citizens. We decomposed the scenario into two hypothetical use cases as described below.
+
+- Developed a [Neighborhood Model](https://github.com/smartcitypoc/smartcitypoc/tree/master/Neighborhood-Model) based on available datasets from the City of Denver demographic data to predict crime in a neighborhood.
+- Developed real-time dashboards leveraging Azure Stream Analytics, based on events produced by IoT devices such as weather sensors, traffic signals etc. to analyze and improve security, safety and well-being of Denver citizens.
 
 
 --We decomposed the scenarios .....
