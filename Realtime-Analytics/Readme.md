@@ -113,7 +113,7 @@ namespace SimulatedDevice
 ----------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-- **Azure environment deployment**
+- ***Azure environment deployment***
 
 DMI developed a PowerShell script that automated Azure environment deployment along with common framework components  such as Azure resource groups, Power BI consumer groups etc. 
 
@@ -186,6 +186,18 @@ New-AzureRmServiceBusQueue -ResourceGroupName $resourceGroup `
     -Name $serviceBusQueueName
 ----------------------------------------------------------------------------------------------------------------------------------------
 ```
+- ***Create a device identity***
+1. In the list of resources, click DMITestHub. This was created as a part of PowerShell Script. Select IoT Devices from the Hub pane.
+2. Click + Add. On the Add Device pane, fill in the device ID as DMI-Test-Device. Leave the keys empty, and check Auto Generate Keys. Make sure Connect device to IoT hub is enabled. Click Save.
+
+![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Device_Identity.png)
+
+3. Now that it's been created, click on the device to confirm  the creation of keys.
+![alt text](https://github.com/smartcitypoc/smartcitypoc/blob/master/Realtime-Analytics/Images/Device_Keys.png)
+
+
+
+
 
 
 
